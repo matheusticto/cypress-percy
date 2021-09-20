@@ -6,3 +6,14 @@ describe('TicketBOx', () => {
         cy.screenshot('form')
      });
     });
+
+it('updates agreement', () => {
+  
+  cy.get('#first-name').type('Matheus');
+  cy.get('#last-name').type('Santos');
+  cy.get('#ticket-quantity').select('4');
+  cy.get('#vip').check();
+  cy.percySnapshot();
+
+});
+
